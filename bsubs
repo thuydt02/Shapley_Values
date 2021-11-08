@@ -1,0 +1,3 @@
+bsub -q gpu -n 1 -R "select[gpumem>10000] rusage[mem=4000,ngpus_excl_p=1] span[ptile=1]" -W 120:00 < ./run/mnist/run0_flSV_per_08_005_iid
+bsub -q gpu -n 1 -R "select[gpumem>10000] rusage[mem=4000,ngpus_excl_p=1] span[ptile=1]" -W 120:00 < ./run/mnist/run0_flSV_clustering_08_005_iid
+bsub -q gpu -n 1 -R "rusage[mem=3000,ngpus_excl_p=1] span[ptile=1]" -W 720:00 < ./run/synthetic_regression/exact_flSV
